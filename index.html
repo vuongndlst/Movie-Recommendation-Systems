@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đề Xuất Phim</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-8">
+        <h1 class="text-xl mb-4">Hệ Thống Đề Xuất Phim</h1>
+        <select id="movieDropdown" class="bg-gray-800 text-white p-2 rounded" onchange="getRecommendations()">
+            <!-- Các tùy chọn sẽ được tải ở đây -->
+        </select>
+        <button onclick="getRecommendations()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2">
+            Lấy Đề Xuất
+        </button>
+        <div id="recommendations" class="mt-4"></div>
+        <button onclick="submitFeedback()" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">
+            Gửi Phản Hồi
+        </button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
